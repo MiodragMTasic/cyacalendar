@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Schedule </title>
+<meta charset="utf-8">
+<script src="prototype.js"></script>
+<script src="calendar.js"></script>
+<link href="cyacalendar.css" type="text/css" rel="stylesheet">
+<script src="updateCalendar.js"></script>
+</head>
+<body>
+    <div id="main">
+      <div id="section">
+      <div class="info">
+       <p>
+         Username: </p>
+           <input type="text" name="q" value="">
+           <p> Email: </p>
+         <input type="email" name="name" value="">
+           <p> Password: </p>
+         <input type="password" name="password" value="">
+         <p> Re-enter Password: </p>
+       <input type="password" name="password" value="">
+     </div>
+     <p id="testOutput"></p>
+     <div class="floatRight">
+     <div id="theButtons"><button id="yesEditingButton" onclick="startEditing();">Edit</button><button id="noEditingButton" onclick="stopEditing();">Stop Edit</button></div>
+       <div id="calendar">
+       </div>
+     </div>
+     <img id="daImage" src="friendshipPhoto.jpg"  width="44%" height="90%" margin-left:"5%">
+
+  </div>
+</div>
+      <div id="container">
+
+  <span style="  border-color: black;
+    border-style: solid; background-color:lightblue; color: white; padding:5px; font-family:monospace">
+   <a href="calendar3.html">Create my account</a></span>
+
+</div>
+  </body>
+  </html>
