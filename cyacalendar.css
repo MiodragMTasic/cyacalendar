@@ -1,8 +1,5 @@
-
-
-body{
+body {
  background-image: url("background.jpg");
-
 }
 
 .heading {
@@ -21,8 +18,9 @@ body{
   margin-left: 40%;
   margin-right: 40%;
 }
+
 a {
-  color: black;
+  color: blue;
 }
 .button2 {
   text-align: right;
