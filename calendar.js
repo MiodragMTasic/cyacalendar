@@ -1,5 +1,3 @@
-window.onload = createCalendar;
-
 function createCalendar() {
   var k = 8;
   var allDays = ["", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -7,7 +5,7 @@ function createCalendar() {
   var firstTR = document.createElement("tr");
   for (v=0; v<8; v++){
     var newFirstTRTD = document.createElement("td");
-    newFirstTRTD.id = "tdThing";
+    newFirstTRTD.id = "tableData";
     newFirstTRTD.innerHTML = allDays[v];
     firstTR.appendChild(newFirstTRTD);
   }
@@ -18,12 +16,12 @@ function createCalendar() {
         var newTR = document.createElement("tr");
         newTable.appendChild(newTR);
         var newTD = document.createElement("td");
-        newTD.id = "tdThing";
+        newTD.id = "tableData";
         newTD.innerHTML = k + ":00";
         newTR.appendChild(newTD);
         for (u=0; u<7; u++){
           var emptyTD = document.createElement("td");
-          emptyTD.id = "tdThing";
+          emptyTD.id = "tableData";
           emptyTD.innerHTML = "";
           newTR.appendChild(emptyTD);
         }
@@ -33,12 +31,12 @@ function createCalendar() {
         var newTR2 = document.createElement("tr");
         newTable.appendChild(newTR2);
         var newTD2 = document.createElement("td");
-        newTD2.id = "tdThing";
+        newTD2.id = "tableData";
         newTD2.innerHTML = k+ ":30";
         newTR2.appendChild(newTD2);
         for (r=0; r<7; r++){
           var emptyTD = document.createElement("td");
-          emptyTD.id = "tdThing";
+          emptyTD.id = "tableData";
           emptyTD.innerHTML = "";
           newTR2.appendChild(emptyTD);
         }
@@ -56,11 +54,12 @@ for (p=0; p<4; p++){
     var newTR = document.createElement("tr");
     newTable.appendChild(newTR);
     var newTD = document.createElement("td");
-    newTD.id = "tdThing";
+    newTD.id = "tableData";
     newTD.innerHTML = "0" + k + ":00";
     newTR.appendChild(newTD);
     for (u=0; u<7; u++){
       var emptyTD = document.createElement("td");
+      emptyTD.id="tableData";
       emptyTD.innerHTML = "";
       newTR.appendChild(emptyTD);
     }
@@ -70,12 +69,13 @@ for (p=0; p<4; p++){
     var newTR2 = document.createElement("tr");
     newTable.appendChild(newTR2);
     var newTD2 = document.createElement("td");
-    newTD2.id = "tdThing";
+    newTD2.id = "tableData";
     newTD2.innerHTML = "0" + k+ ":30";
     newTR2.appendChild(newTD2);
     for (r=0; r<7; r++){
       var emptyTD = document.createElement("td");
       emptyTD.innerHTML = "";
+      emptyTD.id="tableData";
       newTR2.appendChild(emptyTD);
     }
     k+=1;
@@ -84,6 +84,7 @@ for (p=0; p<4; p++){
 }
 break;
 }
+  newTable.id = "theTableItself";
   var theWantedArea = $("calendar");
   theWantedArea.appendChild(newTable);
   }

@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Schedule </title>
-<meta charset="utf-8">
-<script src="prototype.js"></script>
-<script src="calendar.js"></script>
-<link href="cyacalendar.css" type="text/css" rel="stylesheet">
-<script src="updateCalendar.js"></script>
+  <title> Schedule </title>
+  <meta charset="utf-8">
+  <script src = "prototype.js"></script>
+  <script src = "calendar.js"></script>
+  <script src = "updateCalendar.js"></script>
+  <script src = "createLogInfo.js"></script>
+  <link href="cyacalendar.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-    <div id="main">
-      <div id="section">
-      <div class="info">
-       <p>
-         Username: </p>
-           <input type="text" name="q" value="">
-           <p> Email: </p>
-         <input type="email" name="name" value="">
-           <p> Password: </p>
-         <input type="password" name="password" value="">
-         <p> Re-enter Password: </p>
-       <input type="password" name="password" value="">
-     </div>
-     <p id="testOutput"></p>
-     <div class="floatRight">
-     <div id="theButtons"><button id="yesEditingButton" onclick="startEditing();">Edit</button><button id="noEditingButton" onclick="stopEditing();">Stop Edit</button></div>
-       <div id="calendar">
-       </div>
-     </div>
-     <img id="daImage" src="friendshipPhoto.jpg"  width="44%" height="90%" margin-left:"5%">
+<body onload="createCalendar(), createLogInfo();">
 
+
+    <div id="loginBox" style="position: relative; left: 70px; top:10px "></div>
+    <img src="friendshipPhoto.jpg" style="width:500px; margin-left: 20px; margin-top: 50px; border-color: rgb(200,180,0); border-width: 10px; border-style:ridge;">
+    <div id="topRightHalf" style= "position: absolute; top: 16px; right: 100px"> <!-- Right section of top half-->
+
+        <button id="yesEditingButton" onclick="startEditing();">Edit</button> <!-- Places button that enables editing of the calendar -->
+        <button id="noEditingButton" onclick="stopEditing();">Stop Edit</button> <!-- Places button that disables editing of the calendar -->
+        <p id="calendar"></p>
   </div>
-</div>
-      <div id="container">
 
-  <span style="  border-color: black;
-    border-style: solid; background-color:lightblue; color: white; padding:5px; font-family:monospace">
-   <a href="personalProfileExample.html">Create my account</a></span>
-</div>
+
+
+    <div id="bottomSection"> <!-- Bottom half of the webpage-->
+    </div>
+
   </body>
   </html>
